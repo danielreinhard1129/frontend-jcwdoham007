@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid</title>
+    <style>
+      .konten {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .konten div {
+        background-color: cadetblue;
+        padding: 30px;
+        border: 1px solid black;
+        height: 500px;
+      }
+
+      /* Tablets */
+      @media (min-width: 481px) and (max-width: 768px) {
+        .konten {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      /* Desktop */
+      @media (min-width: 769px) {
+        .konten {
+          grid-template-columns: 1fr 1fr 1fr;
+          column-gap: 20px;
+          row-gap: 40px;
+          /* gap: 20px; */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="konten">
+      <div>Kotak 1</div>
+      <div>Kotak 2</div>
+      <div>Kotak 3</div>
+      <div>Kotak 1</div>
+      <div>Kotak 2</div>
+      <div>Kotak 3</div>
+    </div>
+  </body>
+</html>
